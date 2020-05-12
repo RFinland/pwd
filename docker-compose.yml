@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    nginx:
+        ports:
+            - '80:80'
+        volumes:
+            - '/var/run/docker.sock:/tmp/docker.sock:ro'
+        restart: always
+        logging:
+            options:
+                max-size: 1g
+        image: nginx
